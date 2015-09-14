@@ -1,5 +1,6 @@
 library(RODBC)
 myconn <-odbcConnect("TF24")
+#input is edge list
 el <- sqlFetch(myconn, "S_D_MATRIX")
 
 igraph <- graph.data.frame(el)
